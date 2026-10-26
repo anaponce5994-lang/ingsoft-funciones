@@ -136,3 +136,16 @@ def volumen_paralelepipedo(largo: float, ancho: float, alto: float) -> float:
 		raise ValueError("Las dimensiones deben ser mayores que cero")
 	return largo * ancho * alto
 
+
+
+# ---------- Nueva modalidad: Aviso Confidencialidad ----------
+
+def aviso_confidencialidad(nombre: str) -> str:
+	"""Genera el aviso de confidencialidad para un usuario."""
+	if not nombre or not nombre.strip():
+		raise ValueError("El nombre no puede estar vacío")
+	return (
+		f"AVISO DE CONFIDENCIALIDAD: {nombre.strip()}, la información "
+		"contenida en este sistema es confidencial y de uso exclusivo "
+		"para fines académicos. Queda prohibida su distribución sin autorización."
+	)
